@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="725.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminController">
+   <children>
+      <Rectangle arcHeight="50.0" arcWidth="20.0" fill="#eeefe1" height="725.0" layoutX="618.0" stroke="#dff5ff" strokeType="INSIDE" width="450.0" />
+      <ImageView fitHeight="481.0" fitWidth="539.0" layoutX="32.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../library_management_system/src/main/resources/image/library_bnr_img.png" />
+         </image>
+      </ImageView>
+      <Text fontSmoothingType="LCD" layoutX="39.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Management System );" wrappingWidth="565.5131225585938">
+         <font>
+            <Font name="Apple SD Gothic Neo Bold" size="59.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#eeefe1" height="47.0" layoutX="793.0" layoutY="557.0" stroke="BLACK" strokeType="INSIDE" width="105.0" />
+      <JFXTextField fx:id="txtUsername" layoutX="716.0" layoutY="268.0" prefHeight="30.0" prefWidth="263.0" promptText="Username" />
+      <Text layoutX="818.0" layoutY="582.0" onMouseClicked="#btnSIgnUpAction" strokeType="OUTSIDE" strokeWidth="0.0" text="login" wrappingWidth="61.71557719206908">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="734.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="admin login" wrappingWidth="243.64501953125">
+         <font>
+            <Font name="Apple SD Gothic Neo Thin" size="46.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#eeefe1" height="47.0" layoutX="652.0" layoutY="618.0" onMouseClicked="#btnHomeOnAction" stroke="BLACK" strokeType="INSIDE" width="105.0" />
+      <JFXPasswordField fx:id="txtPassword" layoutX="723.0" layoutY="369.0" prefHeight="46.0" prefWidth="266.0" promptText="Password" />
+      <JFXPasswordField fx:id="txtConfirmPassword" layoutX="730.0" layoutY="453.0" prefHeight="46.0" prefWidth="266.0" promptText="Password" />
+      <Text layoutX="899.0" layoutY="649.0" onMouseClicked="#btnSignInOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="signin" wrappingWidth="61.71557719206908">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
