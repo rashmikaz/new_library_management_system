@@ -14,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.bo.BoFactory;
@@ -57,60 +58,6 @@ public class BorrowedBooksController implements Initializable {
 
     BorrowBookBo borrowBookBo = (BorrowBookBo) BoFactory.getBOFactory().getBo(BoFactory.BoTypes.BORROWEDBOOK);
 
-    @FXML
-    void btnBooksOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/user_book.fxml"));
-
-        Scene scene = new Scene(root);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
-
-    @FXML
-    void btnBorrowedOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/borrowed_books.fxml"));
-
-        Scene scene = new Scene(root);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
-
-    @FXML
-    void btnDashboardOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/user_dashboard.fxml"));
-
-        Scene scene = new Scene(root);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
-
-    @FXML
-    void btnPasswordOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/change_password.fxml"));
-
-        Scene scene = new Scene(root);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
-
-    @FXML
-    void btnSignOutOnAction(ActionEvent event) throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/user_login.fxml"));
-
-        Scene scene = new Scene(rootNode);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -157,5 +104,68 @@ public class BorrowedBooksController implements Initializable {
         colDueDate.setCellValueFactory(new PropertyValueFactory<>("returnDate"));
         colBookId.setCellValueFactory(new PropertyValueFactory<>("bookId"));
         colReturn.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("btnReturn"));
+    }
+
+
+
+
+    @FXML
+    void btnBooksOnAction(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/user_book.fxml"));
+
+        Scene scene = new Scene(root);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+    }
+
+    @FXML
+    void btnBorrowedOnAction(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/borrowed_books.fxml"));
+
+        Scene scene = new Scene(root);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+    }
+
+    @FXML
+    void btnDashboardOnAction(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/user_dashboard.fxml"));
+
+        Scene scene = new Scene(root);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+    }
+
+    @FXML
+    void btnPasswordOnAction(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/change_password.fxml"));
+
+        Scene scene = new Scene(root);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+    }
+
+    @FXML
+    void btnSignOutOnAction(MouseEvent event) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/user_login.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
     }
 }

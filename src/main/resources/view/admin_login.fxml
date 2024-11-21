@@ -34,8 +34,14 @@
             <Font name="Apple SD Gothic Neo Thin" size="46.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#eeefe1" height="47.0" layoutX="652.0" layoutY="618.0" onMouseClicked="#btnHomeOnAction" stroke="BLACK" strokeType="INSIDE" width="105.0" />
-      <Text layoutX="877.0" layoutY="662.0" onMouseClicked="#signUpChangeOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="login" wrappingWidth="61.71557719206908">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#eeefe1" height="47.0" layoutX="648.0" layoutY="558.0" onMouseClicked="#btnHomeOnAction" stroke="BLACK" strokeType="INSIDE" width="105.0" />
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#eeefe1" height="47.0" layoutX="927.0" layoutY="557.0" stroke="BLACK" strokeType="INSIDE" width="105.0" />
+      <Text layoutX="944.0" layoutY="588.0" onMouseClicked="#signUpChangeOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="signup" wrappingWidth="61.71557719206908">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="675.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="signup" wrappingWidth="61.71557719206908">
          <font>
             <Font size="18.0" />
          </font>

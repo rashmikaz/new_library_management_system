@@ -50,22 +50,22 @@ public class AdminLoginController {
     }
 
     public boolean validateAdmin(){
-        String userName = txtUsername.getText();
-
-        boolean isUserNameValidated = Pattern.matches("[A-Z][a-zA-Z\\s]+", userName);
-        if (!isUserNameValidated) {
-            new Alert(Alert.AlertType.ERROR, "Invalid UserName or Password!").show();
-            return false;
-        }
-
-        String password = txtPassword.getText();
-
-        boolean isPasswordValidated = Pattern.matches("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}", password);
-        if (!isPasswordValidated) {
-            new Alert(Alert.AlertType.ERROR, "Invalid Username or Password").show();
-            return false;
-        }
-
+//        String userName = txtUsername.getText();
+//
+//        boolean isUserNameValidated = Pattern.matches("[A-Z][a-zA-Z\\s]+", userName);
+//        if (!isUserNameValidated) {
+//            new Alert(Alert.AlertType.ERROR, "Invalid UserName or Password!").show();
+//            return false;
+//        }
+//
+//        String password = txtPassword.getText();
+//
+//        boolean isPasswordValidated = Pattern.matches("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}", password);
+//        if (!isPasswordValidated) {
+//            new Alert(Alert.AlertType.ERROR, "Invalid Username or Password").show();
+//            return false;
+//        }
+//
         return true;
     }
 

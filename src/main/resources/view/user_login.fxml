@@ -34,11 +34,17 @@
             <Font name="Apple SD Gothic Neo Thin" size="46.0" />
          </font>
       </Text>
-      <Text layoutX="825.0" layoutY="653.0" onMouseClicked="#signUpChangeOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="login" wrappingWidth="61.71557719206908">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#eeefe1" height="47.0" layoutX="644.0" layoutY="563.0" stroke="BLACK" strokeType="INSIDE" width="105.0" />
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#eeefe1" height="47.0" layoutX="929.0" layoutY="556.0" stroke="BLACK" strokeType="INSIDE" width="105.0" />
+      <Text layoutX="948.0" layoutY="587.0" onMouseClicked="#signUpChangeOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="signup" wrappingWidth="61.71557719206908">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#eeefe1" height="47.0" layoutX="645.0" layoutY="573.0" onMouseClicked="#btnHomeOnAction" stroke="BLACK" strokeType="INSIDE" width="105.0" />
+      <Text layoutX="663.0" layoutY="593.0" onMouseClicked="#btnHomeOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="back" wrappingWidth="61.71557719206908">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

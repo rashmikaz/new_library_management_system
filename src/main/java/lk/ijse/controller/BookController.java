@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.bo.BoFactory;
@@ -45,8 +46,6 @@ public class BookController implements Initializable {
     @FXML
     private TableColumn<BookDto, String> colTitle;
 
-    @FXML
-    private AnchorPane root;
 
     @FXML
     private TableView<BookTm> tableBooks;
@@ -65,27 +64,7 @@ public class BookController implements Initializable {
 
     BookBo bookBo = (BookBo) BoFactory.getBOFactory().getBo(BoFactory.BoTypes.BOOK);
 
-    @FXML
-    void btnBooksOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/books_form.fxml"));
 
-        Scene scene = new Scene(root);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
-
-    @FXML
-    void btnBranchesOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/branch_form.fxml"));
-
-        Scene scene = new Scene(root);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
@@ -148,16 +127,6 @@ public class BookController implements Initializable {
 
     }
 
-    @FXML
-    void btnSignOutOnAction(ActionEvent event) throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/admin_login.fxml"));
-
-        Scene scene = new Scene(rootNode);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
@@ -185,20 +154,7 @@ public class BookController implements Initializable {
         }
     }
 
-    @FXML
-    void btnUsersOnAction(ActionEvent event) {
 
-    }
-
-    public void btnDashboardOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/admin_dashboard.fxml"));
-
-        Scene scene = new Scene(root);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
 
     public boolean validateBooks(){
         String title = txtTitle.getText();
@@ -297,4 +253,75 @@ public class BookController implements Initializable {
         colGenre.setCellValueFactory(new PropertyValueFactory<>("genre"));
         colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
     }
+
+
+    @FXML
+    void btnBooksOnAction(MouseEvent event) throws IOException {
+
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/books_form.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+    }
+
+    @FXML
+    void btnBranchesOnAction(MouseEvent event) throws IOException {
+
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/branch_form.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+
+    }
+
+    @FXML
+    void btnDashboardOnAction(MouseEvent event) throws IOException {
+
+
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/admin_dashboard.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+
+    }
+
+    @FXML
+    void btnSignOutOnAction(MouseEvent event) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/admin_login.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+    }
+
+    @FXML
+    void btnUsersOnAction(MouseEvent event) throws IOException {
+
+
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/user_form.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+
+    }
+
 }

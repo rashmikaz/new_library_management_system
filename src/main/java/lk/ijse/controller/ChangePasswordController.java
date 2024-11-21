@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.bo.BoFactory;
@@ -54,72 +55,7 @@ public class ChangePasswordController {
 
     UserBo userBo = (UserBo) BoFactory.getBOFactory().getBo(BoFactory.BoTypes.USER);
 
-    @FXML
-    void btnBooksOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/user_book.fxml"));
 
-        Scene scene = new Scene(root);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
-
-    @FXML
-    void btnDashboardOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/user_dashboard.fxml"));
-
-        Scene scene = new Scene(root);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
-
-    @FXML
-    void btnPasswordOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/change_password.fxml"));
-
-        Scene scene = new Scene(root);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
-
-    @FXML
-    void btnSignOutOnAction(ActionEvent event) throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/user_login.fxml"));
-
-        Scene scene = new Scene(rootNode);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
-
-    @FXML
-    void btnUpdatePasswordOnAction(ActionEvent event) {
-        if(validateUser()){
-            String userName = txtUsername.getText();
-            String password = txtPassword.getText();
-            String confirmPassword = txtConfirmPassword.getText();
-
-            UserDto userDto = new UserDto(userName,password,confirmPassword);
-
-            try {
-                boolean isUpdate = userBo.updateUser(userDto);
-                if(isUpdate){
-                    clearFields();
-                    new Alert(Alert.AlertType.CONFIRMATION,"Password Changed Successfull").show();
-                }else{
-                    new Alert(Alert.AlertType.ERROR,"Password Change Unsuccessfull").show();
-                }
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
 
     public boolean validateUser(){
         String userName = txtUsername.getText();
@@ -184,4 +120,97 @@ public class ChangePasswordController {
         txtVisibleConfirmPassword.setVisible(true);
         closeConfirmVisible.setVisible(true);
     }
+
+
+
+    @FXML
+    void btnBooksOnAction(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/user_book.fxml"));
+
+        Scene scene = new Scene(root);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+    }
+
+    @FXML
+    void btnBorrowedOnAction(MouseEvent event) {
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(this.getClass().getResource("/view/borrowed_books.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        Scene scene = new Scene(root);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+
+    }
+
+    @FXML
+    void btnDashboardOnAction(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/user_dashboard.fxml"));
+
+        Scene scene = new Scene(root);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+    }
+
+    @FXML
+    void btnPasswordOnAction(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/change_password.fxml"));
+
+        Scene scene = new Scene(root);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+    }
+
+    @FXML
+    void btnSignOutOnAction(MouseEvent event) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/user_login.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+    }
+
+    @FXML
+    void btnUpdatePasswordOnAction(ActionEvent event) {
+        if(validateUser()){
+            String userName = txtUsername.getText();
+            String password = txtPassword.getText();
+            String confirmPassword = txtConfirmPassword.getText();
+
+            UserDto userDto = new UserDto(userName,password,confirmPassword);
+
+            try {
+                boolean isUpdate = userBo.updateUser(userDto);
+                if(isUpdate){
+                    clearFields();
+                    new Alert(Alert.AlertType.CONFIRMATION,"Password Changed Successfull").show();
+                }else{
+                    new Alert(Alert.AlertType.ERROR,"Password Change Unsuccessfull").show();
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+    }
+
 }

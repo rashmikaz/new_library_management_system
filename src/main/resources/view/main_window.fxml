@@ -25,7 +25,7 @@
             <Font name="Apple SD Gothic Neo Thin" size="46.0" />
          </font>
       </Text>
-      <Text fontSmoothingType="LCD" layoutX="775.0" layoutY="353.0" onMouseClicked="#adminOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="| admin" wrappingWidth="191.304443359375">
+      <Text fontSmoothingType="LCD" layoutX="775.0" layoutY="353.0" onMouseClicked="#adminOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="admin" wrappingWidth="191.304443359375">
          <font>
             <Font name="Apple SD Gothic Neo Thin" size="46.0" />
          </font>

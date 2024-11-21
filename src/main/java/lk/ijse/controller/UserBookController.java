@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.bo.BoFactory;
@@ -18,8 +19,6 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class UserBookController {
-    @FXML
-    private AnchorPane root;
 
     @FXML
     private AnchorPane rootNode;
@@ -30,14 +29,41 @@ public class UserBookController {
     @FXML
     private TextField txtSearchBook;
 
+
     BookBo bookBo = (BookBo) BoFactory.getBOFactory().getBo(BoFactory.BoTypes.BOOK);
+
+
     @FXML
-    void btnBooksOnAction(ActionEvent event) {
+    void btnSignOutOnAction(ActionEvent event) throws IOException {
+
+    }
+
+    private void clearFields() {
+        txtSearchBook.setText("");
+    }
+
+
+
+    @FXML
+    void btnBooksOnAction(MouseEvent event) {
 
     }
 
     @FXML
-    void btnDashboardOnAction(ActionEvent event) throws IOException {
+    void btnBorrowedOnAction(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/borrowed_books.fxml"));
+
+        Scene scene = new Scene(root);
+
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
+
+    }
+
+    @FXML
+    void btnDashboardOnAction(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(this.getClass().getResource("/view/user_dashboard.fxml"));
 
         Scene scene = new Scene(root);
@@ -45,10 +71,11 @@ public class UserBookController {
         Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
         primaryStage.setScene(scene);
         primaryStage.setTitle("Book Worm");
+
     }
 
     @FXML
-    void btnPasswordOnAction(ActionEvent event) throws IOException {
+    void btnPasswordOnAction(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(this.getClass().getResource("/view/change_password.fxml"));
 
         Scene scene = new Scene(root);
@@ -56,6 +83,7 @@ public class UserBookController {
         Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
         primaryStage.setScene(scene);
         primaryStage.setTitle("Book Worm");
+
     }
 
     @FXML
@@ -93,7 +121,7 @@ public class UserBookController {
     }
 
     @FXML
-    void btnSignOutOnAction(ActionEvent event) throws IOException {
+    void btnSignOutOnAction(MouseEvent event) throws IOException {
         Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/user_login.fxml"));
 
         Scene scene = new Scene(rootNode);
@@ -101,9 +129,7 @@ public class UserBookController {
         Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
         primaryStage.setScene(scene);
         primaryStage.setTitle("Book Worm");
+
     }
 
-    private void clearFields() {
-        txtSearchBook.setText("");
-    }
 }

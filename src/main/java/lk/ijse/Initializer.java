@@ -13,10 +13,12 @@ public class Initializer extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/main_window.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/user_dashboard.fxml"))));
         stage.centerOnScreen();
         stage.setTitle("Book Worm");
 
         stage.show();
+
     }
+
 }
