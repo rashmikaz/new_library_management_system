@@ -37,7 +37,7 @@ User Side:
 
 - Borrow books and view borrowed book details
 
-  <img width="856" alt="Screenshot 2024-12-29 at 12 33 30 PM" src="https://github.com/user-attachments/assets/dde7167a-df43-4a74-985d-862720933530" />
+<img width="856" alt="Screenshot 2024-12-29 at 12 33 30 PM" src="https://github.com/user-attachments/assets/dde7167a-df43-4a74-985d-862720933530" />
 <img width="801" alt="Screenshot 2024-12-29 at 12 41 54 PM" src="https://github.com/user-attachments/assets/91fa0973-ce48-42bc-90d1-84894ba786e9" />
 <img width="800" alt="Screenshot 2024-12-29 at 12 32 11 PM" src="https://github.com/user-attachments/assets/79d4f9b9-729b-4efe-984b-ec8a55bebcbb" />
 <img width="798" alt="Screenshot 2024-12-29 at 12 31 38 PM" src="https://github.com/user-attachments/assets/092a068b-8093-426e-b104-1b0d92886a98" />
